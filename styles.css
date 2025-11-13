@@ -296,7 +296,7 @@ p.section-title::after {
 .timeline-item::before {
     content: '';
     position: absolute;
-    left: -47px;
+    left: -50px;
     top: 0;
     width: 16px;
     height: 16px;
@@ -457,7 +457,7 @@ p.section-title::after {
     }
 
     .timeline-item::before {
-        left: -37px;
+        left: -40px;
     }
 
     .works-grid {
