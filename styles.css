@@ -193,22 +193,24 @@ body {
     padding: 20px;
 }
 
-.intro-name {
-    font-size: 2.5rem;
+p.intro-name {
+    font-size: 1rem;
     color: var(--color-primary);
     margin-bottom: 10px;
-    font-weight: 700;
+    font-weight: normal;
+    display: block;
 }
 
-.intro-title {
-    font-size: 1.5rem;
+p.intro-title {
+    font-size: 1rem;
     color: var(--color-primary-dark);
     margin-bottom: 20px;
-    font-weight: 500;
+    font-weight: normal;
+    display: block;
 }
 
 .intro-text {
-    font-size: 1.1rem;
+    font-size: 1rem;
     color: #555;
     margin-bottom: 30px;
     line-height: 1.8;
@@ -244,17 +246,18 @@ body {
     background-color: #ffffff;
 }
 
-.section-title {
-    font-size: 2.5rem;
+p.section-title {
+    font-size: 1rem;
     color: var(--color-primary);
     text-align: center;
     margin-bottom: 60px;
-    font-weight: 700;
+    font-weight: normal;
     position: relative;
     padding-bottom: 20px;
+    display: block;
 }
 
-.section-title::after {
+p.section-title::after {
     content: '';
     position: absolute;
     bottom: 0;
@@ -304,8 +307,8 @@ body {
 }
 
 .timeline-year {
-    font-size: 1.2rem;
-    font-weight: bold;
+    font-size: 1rem;
+    font-weight: normal;
     color: var(--color-primary);
     margin-bottom: 10px;
 }
@@ -323,13 +326,15 @@ body {
     transform: translateY(-2px);
 }
 
-.timeline-content h3 {
+.timeline-content p:first-of-type {
     color: var(--color-primary-dark);
     margin-bottom: 10px;
-    font-size: 1.3rem;
+    font-size: 1rem;
+    font-weight: normal;
+    display: block;
 }
 
-.timeline-content p {
+.timeline-content p:not(:first-of-type) {
     color: #555;
     line-height: 1.6;
 }
@@ -342,8 +347,8 @@ body {
 
 .works-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 60px;
     margin-top: 40px;
 }
 
@@ -369,14 +374,15 @@ body {
     flex-direction: column;
 }
 
-.work-content h3 {
+.work-content p:first-of-type {
     color: var(--color-primary);
     margin-bottom: 12px;
-    font-size: 1.4rem;
-    font-weight: 600;
+    font-size: 1rem;
+    font-weight: normal;
+    display: block;
 }
 
-.work-content p {
+.work-content p:not(:first-of-type) {
     color: #555;
     margin-bottom: 20px;
     line-height: 1.6;
@@ -430,16 +436,16 @@ body {
         order: -1;
     }
 
-    .intro-name {
-        font-size: 2rem;
+    p.intro-name {
+        font-size: 1rem;
     }
 
-    .intro-title {
-        font-size: 1.2rem;
+    p.intro-title {
+        font-size: 1rem;
     }
 
-    .section-title {
-        font-size: 2rem;
+    p.section-title {
+        font-size: 1rem;
     }
 
     .timeline {
@@ -475,12 +481,12 @@ body {
         padding: 60px 20px;
     }
 
-    .intro-name {
-        font-size: 1.8rem;
+    p.intro-name {
+        font-size: 1rem;
     }
 
-    .section-title {
-        font-size: 1.8rem;
+    p.section-title {
+        font-size: 1rem;
     }
 
     .experience-section,
