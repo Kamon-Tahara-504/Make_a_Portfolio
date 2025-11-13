@@ -1,5 +1,5 @@
 /* ========================================
-   色を変更する方法（超簡単！）
+   cssで色を変更する方法（超簡単！）
    ========================================
    
    このサイトの色を変えたいですか？
@@ -9,7 +9,7 @@
    ↓
    1. 下の色コード（#FF9800など）を変える
    2. ブラウザでページを更新（command + r）
-   3. 色が変わってる！すごい！
+   3. 色が変わってる！すげえ！！！
    
    色コードって何？
    ↓
@@ -29,15 +29,15 @@
 :root {
     /* メインの色（今はグレー）
        この色を変えると、ボタンやリンクの色が全部変わります */
-    --color-primary: #a8a8a8;
+    --color-primary: #6a6a6a;
     
     /* 濃い色（今はグレー）
        タイトルや見出しに使われます */
-    --color-primary-dark: #a8a8a8;
+    --color-primary-dark: #000000;
     
     /* 薄い色（今はグレー）
        背景に使われます */
-    --color-primary-light: #a8a8a8;
+    --color-primary-light: #6a6a6a;
     
     /* この数字は触らなくてOK！
        透明度を使う時に必要な数字です（今は気にしなくて大丈夫） */
@@ -362,24 +362,6 @@ body {
     transform: translateY(-8px);
 }
 
-.work-image {
-    width: 100%;
-    height: 200px;
-    overflow: hidden;
-    background-color: var(--color-primary-light);
-}
-
-.work-image img.work-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.3s ease;
-}
-
-.work-card:hover .work-image img.work-img {
-    transform: scale(1.1);
-}
-
 .work-content {
     padding: 25px;
     flex-grow: 1;
@@ -507,3 +489,4 @@ body {
     }
 }
 
+/* 一番下まできた君はプログラミングの才能があるかも！！！ */

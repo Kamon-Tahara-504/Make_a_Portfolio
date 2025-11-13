@@ -1,3 +1,29 @@
+<!-- ========================================
+   HTMLタグの簡単な説明（超簡単！）
+   ========================================
+   
+   このファイルでサイトの文字を変えられます！
+   実は、タグの中の白い文字を変えるだけで、サイトに表示される文字が変わります！
+   
+   どうやって変えるの？
+   ↓
+   1. 下の説明を見て、どのタグが何を表示するか確認
+   2. タグの中の文字（例：<h1>ここ</h1> の「ここ」の部分）を変える
+   3. ブラウザでページを更新（command + r）
+   4. 文字が変わってる！すげえ！！！
+   
+   例：名前を変えたい
+   <h1 class="intro-name">名前</h1>  ← これを
+   <h1 class="intro-name">田原 果門</h1>  ← こう変えるだけ！
+   
+   注意！
+   ↓
+   - < と > で囲まれた部分（タグ）は消さないでください
+   - タグの中の文字だけを変えてください
+   - タグの名前（class="..."など）も変えないでください(動かなくなっちゃいます！)
+   
+   ======================================== -->
+
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -14,7 +40,7 @@
             <ul class="nav-menu">
                 <li><a href="#about">自己紹介</a></li>
                 <li><a href="#profile">プロフィール</a></li>
-                <li><a href="#hobbies">趣味</a></li>
+                <li><a href="#hobbies">趣味・興味</a></li>
             </ul>
         </div>
     </nav>
@@ -26,10 +52,11 @@
                 <img src="images/PlaceHolder.png" alt="プロフィール画像" class="profile-img">
             </div>
             <div class="intro-content">
-                <h1 class="intro-name">あなたの名前</h1>
+                <h1 class="intro-name">名前</h1>
                 <h2 class="intro-title">自己紹介</h2>
                 <p class="intro-text">
                     ここに自己紹介文を記載します。<br><!-- 改行したい時は <br> を使用 -->
+                    ここに入力してください。 <br>
                     ここに入力してください。 <br>
                 </p>
                 <div class="intro-details">
@@ -40,7 +67,7 @@
                         <strong>趣味:</strong> ここに入力してください。
                     </div>
                     <div class="detail-item">
-                        <strong>特技:</strong> ここに入力してください。
+                        <strong>好きなこと:</strong> ここに入力してください。
                     </div>
                 </div>
             </div>
@@ -53,24 +80,24 @@
             <h2 class="section-title">プロフィール</h2>
             <div class="timeline">
                 <div class="timeline-item">
-                    <div class="timeline-year">現在</div>
+                    <div class="timeline-year">2025</div>
                     <div class="timeline-content">
-                        <h3>現在の活動</h3>
-                        <p>ここに入力</p>
+                        <h3>入力</h3>
+                        <p>ここに入力してください</p>
                     </div>
                 </div>
                 <div class="timeline-item">
-                    <div class="timeline-year">1年前</div>
+                    <div class="timeline-year">2024</div>
                     <div class="timeline-content">
-                        <h3>15祭の時</h3>
-                        <p>角川ドワンゴ情報工科学院入学。</p>
+                        <h3>入力</h3>
+                        <p>ここに入力してください</p>
                     </div>
                 </div>
                 <div class="timeline-item">
-                    <div class="timeline-year">12年前</div>
+                    <div class="timeline-year">2023</div>
                     <div class="timeline-content">
-                        <h3>5さいの時</h3>
-                        <p>幼稚園入学</p>
+                        <h3>入力</h3>
+                        <p>ここに入力してください</p>
                     </div>
                 </div>
             </div>
@@ -83,12 +110,9 @@
             <h2 class="section-title">趣味・興味</h2>
             <div class="works-grid">
                 <div class="work-card">
-                    <div class="work-image">
-                        <img src="images/PlaceHolder.png" alt="趣味1" class="work-img">
-                    </div>
                     <div class="work-content">
                         <h3>趣味・興味 1</h3>
-                        <p>ここに入力してください。</p>
+                        <p>ここに入力してください。ああああああああああああああああああああああああああああああああああああああああああああああああ</p>
                         <div class="work-tags">
                             <span class="tag">趣味</span>
                             <span class="tag">活動</span>
@@ -97,12 +121,9 @@
                 </div>
 
                 <div class="work-card">
-                    <div class="work-image">
-                        <img src="images/PlaceHolder.png" alt="趣味2" class="work-img">
-                    </div>
                     <div class="work-content">
                         <h3>趣味・興味 2</h3>
-                        <p>ここに入力してください。</p>
+                        <p>ここに入力してください。ああああああああああああああああああああああああああああああああああああああああああああああああ</p>
                         <div class="work-tags">
                             <span class="tag">趣味</span>
                             <span class="tag">活動</span>
@@ -111,26 +132,9 @@
                 </div>
 
                 <div class="work-card">
-                    <div class="work-image">
-                        <img src="images/PlaceHolder.png" alt="趣味3" class="work-img">
-                    </div>
                     <div class="work-content">
                         <h3>趣味・興味 3</h3>
-                        <p>ここに入力してください。</p>
-                        <div class="work-tags">
-                            <span class="tag">趣味</span>
-                            <span class="tag">活動</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="work-card">
-                    <div class="work-image">
-                        <img src="images/PlaceHolder.png" alt="趣味4" class="work-img">
-                    </div>
-                    <div class="work-content">
-                        <h3>趣味・興味 4</h3>
-                        <p>ここに入力してください。</p>
+                        <p>ここに入力してください。ああああああああああああああああああああああああああああああああああああああああああああああああ</p>
                         <div class="work-tags">
                             <span class="tag">趣味</span>
                             <span class="tag">活動</span>
