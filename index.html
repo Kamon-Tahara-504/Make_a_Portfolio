@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ポートフォリオ</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- ナビゲーションバー -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">Portfolio</div>
+            <ul class="nav-menu">
+                <li><a href="#career">Career</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#works">Works</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- 自己紹介セクション -->
+    <section id="career" class="intro-section">
+        <div class="intro-container">
+            <div class="intro-image">
+                <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="100" cy="100" r="80" fill="#FFE0B2"/>
+                    <circle cx="100" cy="80" r="30" fill="#FF9800"/>
+                    <path d="M 50 160 Q 100 140 150 160" stroke="#FF9800" stroke-width="8" fill="none" stroke-linecap="round"/>
+                </svg>
+            </div>
+            <div class="intro-content">
+                <h1 class="intro-name">あなたの名前</h1>
+                <h2 class="intro-title">職種・肩書き</h2>
+                <p class="intro-text">
+                    ここに自己紹介文を記載します。<br><!-- 改行したい時は <br> を使用 -->
+                    甘いもの大好きです <br>
+                </p>
+                <div class="intro-details">
+                    <div class="detail-item">
+                        <strong>経験年数:</strong> X年
+                    </div>
+                    <div class="detail-item">
+                        <strong>専門分野:</strong> Web開発、デザイン
+                    </div>
+                    <div class="detail-item">
+                        <strong>スキル:</strong> HTML, CSS, JavaScript, React
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 経歴セクション -->
+    <section id="experience" class="experience-section">
+        <div class="container">
+            <h2 class="section-title">経歴</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-year">2024</div>
+                    <div class="timeline-content">
+                        <h3>現在の職務</h3>
+                        <p>現在の職務内容やプロジェクトについての説明を記載します。</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-year">2022</div>
+                    <div class="timeline-content">
+                        <h3>前職</h3>
+                        <p>前職での経験や成果についての説明を記載します。</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-year">2020</div>
+                    <div class="timeline-content">
+                        <h3>入社・就職</h3>
+                        <p>キャリアのスタート地点についての説明を記載します。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 制作物セクション -->
+    <section id="works" class="works-section">
+        <div class="container">
+            <h2 class="section-title">制作物</h2>
+            <div class="works-grid">
+                <div class="work-card">
+                    <div class="work-image">
+                        <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="300" height="200" fill="#FFE0B2"/>
+                            <circle cx="150" cy="100" r="40" fill="#FF9800"/>
+                            <text x="150" y="110" text-anchor="middle" fill="white" font-size="24" font-weight="bold">1</text>
+                        </svg>
+                    </div>
+                    <div class="work-content">
+                        <h3>プロジェクト名 1</h3>
+                        <p>プロジェクトの説明文をここに記載します。使用した技術や特徴などを簡潔に説明してください。</p>
+                        <div class="work-tags">
+                            <span class="tag">HTML</span>
+                            <span class="tag">CSS</span>
+                            <span class="tag">JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="work-card">
+                    <div class="work-image">
+                        <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="300" height="200" fill="#FFE0B2"/>
+                            <circle cx="150" cy="100" r="40" fill="#FF9800"/>
+                            <text x="150" y="110" text-anchor="middle" fill="white" font-size="24" font-weight="bold">2</text>
+                        </svg>
+                    </div>
+                    <div class="work-content">
+                        <h3>プロジェクト名 2</h3>
+                        <p>プロジェクトの説明文をここに記載します。使用した技術や特徴などを簡潔に説明してください。</p>
+                        <div class="work-tags">
+                            <span class="tag">React</span>
+                            <span class="tag">TypeScript</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="work-card">
+                    <div class="work-image">
+                        <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="300" height="200" fill="#FFE0B2"/>
+                            <circle cx="150" cy="100" r="40" fill="#FF9800"/>
+                            <text x="150" y="110" text-anchor="middle" fill="white" font-size="24" font-weight="bold">3</text>
+                        </svg>
+                    </div>
+                    <div class="work-content">
+                        <h3>プロジェクト名 3</h3>
+                        <p>プロジェクトの説明文をここに記載します。使用した技術や特徴などを簡潔に説明してください。</p>
+                        <div class="work-tags">
+                            <span class="tag">Vue.js</span>
+                            <span class="tag">Node.js</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="work-card">
+                    <div class="work-image">
+                        <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="300" height="200" fill="#FFE0B2"/>
+                            <circle cx="150" cy="100" r="40" fill="#FF9800"/>
+                            <text x="150" y="110" text-anchor="middle" fill="white" font-size="24" font-weight="bold">4</text>
+                        </svg>
+                    </div>
+                    <div class="work-content">
+                        <h3>プロジェクト名 4</h3>
+                        <p>プロジェクトの説明文をここに記載します。使用した技術や特徴などを簡潔に説明してください。</p>
+                        <div class="work-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">Django</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- フッター -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Portfolio. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
+
