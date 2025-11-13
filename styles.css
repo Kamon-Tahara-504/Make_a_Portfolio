@@ -1,3 +1,62 @@
+/* ========================================
+   色を変更する方法（超簡単！）
+   ========================================
+   
+   このサイトの色を変えたいですか？
+   実は、下の色コードを変えるだけで、サイト全体の色が変わります！
+   
+   どうやって変えるの？
+   ↓
+   1. 下の色コード（#FF9800など）を変える
+   2. ブラウザでページを更新（command + r）
+   3. 色が変わってる！すごい！
+   
+   色コードって何？
+   ↓
+   #FF9800 みたいな6桁の文字と数字の組み合わせです。
+   インターネットで「色コード 一覧」と検索すると、たくさん見つかります。
+   
+   何が変えられるの？
+   ↓
+   - メインの色：ボタンやリンクの色
+   - ヘッダーの色：上部メニューの背景や文字の色
+   
+   例：オレンジから青に変えたい
+   --color-primary: #a8a8a8;  ← これを
+   --color-primary: #2196F3;  ← こう変えるだけ！
+   
+   ======================================== */
+:root {
+    /* メインの色（今はグレー）
+       この色を変えると、ボタンやリンクの色が全部変わります */
+    --color-primary: #a8a8a8;
+    
+    /* 濃い色（今はグレー）
+       タイトルや見出しに使われます */
+    --color-primary-dark: #a8a8a8;
+    
+    /* 薄い色（今はグレー）
+       背景に使われます */
+    --color-primary-light: #a8a8a8;
+    
+    /* この数字は触らなくてOK！
+       透明度を使う時に必要な数字です（今は気にしなくて大丈夫） */
+    --color-primary-rgb: 255, 152, 0;
+    
+    /* ヘッダー（上部のメニュー）の色
+       ここを変えると、ヘッダーの色が変わります */
+    --header-bg: #ffffff;           /* ヘッダーの背景色 */
+    --header-text: #333;            /* サイトの文字色 */
+    --header-divider: #999;         /* メニューの区切り線 */
+    --header-shadow: rgba(0, 0, 0, 0.1);  /* ヘッダーの影の色 */
+}
+
+
+
+
+
+
+
 /* リセットとベーススタイル */
 * {
     margin: 0;
@@ -28,14 +87,14 @@ body {
     top: 0;
     left: 0;
     right: 0;
-    background-color: #ffffff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: var(--header-bg);
+    box-shadow: 0 2px 4px var(--header-shadow);
     z-index: 1000;
     transition: box-shadow 0.3s ease;
 }
 
 .navbar:hover {
-    box-shadow: 0 4px 8px rgba(255, 152, 0, 0.2);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 
 .nav-container {
@@ -50,7 +109,7 @@ body {
 .nav-logo {
     font-size: 1.5rem;
     font-weight: bold;
-    color: #FF9800;
+    color: var(--color-primary);
 }
 
 .nav-menu {
@@ -62,14 +121,14 @@ body {
 
 .nav-menu li:not(:last-child)::after {
     content: ' | ';
-    color: #999;
+    color: var(--header-divider);
     margin: 0 1rem;
     font-weight: normal;
 }
 
 .nav-menu a {
     text-decoration: none;
-    color: #333;
+    color: var(--header-text);
     font-weight: 500;
     transition: color 0.3s ease;
     position: relative;
@@ -82,12 +141,12 @@ body {
     left: 0;
     width: 0;
     height: 2px;
-    background-color: #FF9800;
+    background-color: var(--color-primary);
     transition: width 0.3s ease;
 }
 
 .nav-menu a:hover {
-    color: #FF9800;
+    color: var(--color-primary);
 }
 
 .nav-menu a:hover::after {
@@ -98,7 +157,7 @@ body {
 .intro-section {
     margin-top: 80px;
     padding: 80px 20px;
-    background: linear-gradient(135deg, #ffffff 0%, #FFE0B2 100%);
+    background: linear-gradient(135deg, #ffffff 0%, var(--color-primary-light) 100%);
 }
 
 .intro-container {
@@ -122,7 +181,7 @@ body {
     height: auto;
     border-radius: 50%;
     object-fit: cover;
-    filter: drop-shadow(0 4px 6px rgba(255, 152, 0, 0.2));
+    filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.15));
     transition: transform 0.3s ease;
 }
 
@@ -136,14 +195,14 @@ body {
 
 .intro-name {
     font-size: 2.5rem;
-    color: #FF9800;
+    color: var(--color-primary);
     margin-bottom: 10px;
     font-weight: 700;
 }
 
 .intro-title {
     font-size: 1.5rem;
-    color: #F57C00;
+    color: var(--color-primary-dark);
     margin-bottom: 20px;
     font-weight: 500;
 }
@@ -164,19 +223,19 @@ body {
 .detail-item {
     padding: 12px;
     background-color: #ffffff;
-    border-left: 4px solid #FF9800;
+    border-left: 4px solid var(--color-primary);
     border-radius: 4px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
     transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 
 .detail-item:hover {
-    box-shadow: 0 4px 8px rgba(255, 152, 0, 0.2);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
     transform: translateX(5px);
 }
 
 .detail-item strong {
-    color: #F57C00;
+    color: var(--color-primary-dark);
 }
 
 /* 経歴セクション */
@@ -187,7 +246,7 @@ body {
 
 .section-title {
     font-size: 2.5rem;
-    color: #FF9800;
+    color: var(--color-primary);
     text-align: center;
     margin-bottom: 60px;
     font-weight: 700;
@@ -203,7 +262,7 @@ body {
     transform: translateX(-50%);
     width: 80px;
     height: 4px;
-    background-color: #FF9800;
+    background-color: var(--color-primary);
     border-radius: 2px;
 }
 
@@ -221,7 +280,7 @@ body {
     top: 0;
     bottom: 0;
     width: 3px;
-    background: linear-gradient(to bottom, #FF9800, #F57C00);
+    background: var(--color-primary);
     border-radius: 2px;
 }
 
@@ -238,16 +297,16 @@ body {
     top: 0;
     width: 16px;
     height: 16px;
-    background-color: #FF9800;
+    background-color: var(--color-primary);
     border: 4px solid #ffffff;
     border-radius: 50%;
-    box-shadow: 0 2px 4px rgba(255, 152, 0, 0.3);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .timeline-year {
     font-size: 1.2rem;
     font-weight: bold;
-    color: #FF9800;
+    color: var(--color-primary);
     margin-bottom: 10px;
 }
 
@@ -260,12 +319,12 @@ body {
 }
 
 .timeline-content:hover {
-    box-shadow: 0 4px 12px rgba(255, 152, 0, 0.2);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     transform: translateY(-2px);
 }
 
 .timeline-content h3 {
-    color: #F57C00;
+    color: var(--color-primary-dark);
     margin-bottom: 10px;
     font-size: 1.3rem;
 }
@@ -278,7 +337,7 @@ body {
 /* 制作物セクション */
 .works-section {
     padding: 80px 20px;
-    background: linear-gradient(135deg, #FFE0B2 0%, #ffffff 100%);
+    background: linear-gradient(135deg, var(--color-primary-light) 0%, #ffffff 100%);
 }
 
 .works-grid {
@@ -299,7 +358,7 @@ body {
 }
 
 .work-card:hover {
-    box-shadow: 0 8px 24px rgba(255, 152, 0, 0.3);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
     transform: translateY(-8px);
 }
 
@@ -307,7 +366,7 @@ body {
     width: 100%;
     height: 200px;
     overflow: hidden;
-    background-color: #FFE0B2;
+    background-color: var(--color-primary-light);
 }
 
 .work-image img.work-img {
@@ -329,7 +388,7 @@ body {
 }
 
 .work-content h3 {
-    color: #FF9800;
+    color: var(--color-primary);
     margin-bottom: 12px;
     font-size: 1.4rem;
     font-weight: 600;
@@ -350,8 +409,8 @@ body {
 }
 
 .tag {
-    background-color: #FFE0B2;
-    color: #F57C00;
+    background-color: var(--color-primary-light);
+    color: var(--color-primary-dark);
     padding: 6px 12px;
     border-radius: 20px;
     font-size: 0.85rem;
@@ -360,14 +419,14 @@ body {
 }
 
 .tag:hover {
-    background-color: #FF9800;
+    background-color: var(--color-primary);
     color: #ffffff;
     transform: scale(1.05);
 }
 
 /* フッター */
 .footer {
-    background-color: #F57C00;
+    background-color: var(--color-primary-dark);
     color: #ffffff;
     padding: 30px 20px;
     text-align: center;
