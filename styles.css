@@ -3,12 +3,12 @@
    ========================================
    
    このサイトの色を変えたいですか？
-   実は、下の4つの数字を変えるだけで、サイト全体の色が変わります！
+   実は、下の色コードを変えるだけで、サイト全体の色が変わります！
    
    どうやって変えるの？
    ↓
-   1. 下の「--color-primary」の後ろの色コード（#FF9800など）を変える
-   2. ブラウザでページを更新（F5キーを押す）
+   1. 下の色コード（#FF9800など）を変える
+   2. ブラウザでページを更新（command + r）
    3. 色が変わってる！すごい！
    
    色コードって何？
@@ -16,27 +16,39 @@
    #FF9800 みたいな6桁の文字と数字の組み合わせです。
    インターネットで「色コード 一覧」と検索すると、たくさん見つかります。
    
+   何が変えられるの？
+   ↓
+   - メインの色：ボタンやリンクの色
+   - ヘッダーの色：上部メニューの背景や文字の色
+   
    例：オレンジから青に変えたい
-   --color-primary: #FF9800;  ← これを
+   --color-primary: #a8a8a8;  ← これを
    --color-primary: #2196F3;  ← こう変えるだけ！
    
    ======================================== */
 :root {
-    /* メインの色（今はオレンジ）
+    /* メインの色（今はグレー）
        この色を変えると、ボタンやリンクの色が全部変わります */
-    --color-primary: #FF9800;
+    --color-primary: #a8a8a8;
     
-    /* 濃い色（今は濃いオレンジ）
+    /* 濃い色（今はグレー）
        タイトルや見出しに使われます */
-    --color-primary-dark: #F57C00;
+    --color-primary-dark: #a8a8a8;
     
-    /* 薄い色（今は薄いオレンジ）
+    /* 薄い色（今はグレー）
        背景に使われます */
-    --color-primary-light: #FFE0B2;
+    --color-primary-light: #a8a8a8;
     
     /* この数字は触らなくてOK！
        透明度を使う時に必要な数字です（今は気にしなくて大丈夫） */
     --color-primary-rgb: 255, 152, 0;
+    
+    /* ヘッダー（上部のメニュー）の色
+       ここを変えると、ヘッダーの色が変わります */
+    --header-bg: #ffffff;           /* ヘッダーの背景色 */
+    --header-text: #333;            /* サイトの文字色 */
+    --header-divider: #999;         /* メニューの区切り線 */
+    --header-shadow: rgba(0, 0, 0, 0.1);  /* ヘッダーの影の色 */
 }
 
 
@@ -75,14 +87,14 @@ body {
     top: 0;
     left: 0;
     right: 0;
-    background-color: #ffffff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: var(--header-bg);
+    box-shadow: 0 2px 4px var(--header-shadow);
     z-index: 1000;
     transition: box-shadow 0.3s ease;
 }
 
 .navbar:hover {
-    box-shadow: 0 4px 8px rgba(var(--color-primary-rgb), 0.2);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 
 .nav-container {
@@ -109,14 +121,14 @@ body {
 
 .nav-menu li:not(:last-child)::after {
     content: ' | ';
-    color: #999;
+    color: var(--header-divider);
     margin: 0 1rem;
     font-weight: normal;
 }
 
 .nav-menu a {
     text-decoration: none;
-    color: #333;
+    color: var(--header-text);
     font-weight: 500;
     transition: color 0.3s ease;
     position: relative;
@@ -169,7 +181,7 @@ body {
     height: auto;
     border-radius: 50%;
     object-fit: cover;
-    filter: drop-shadow(0 4px 6px rgba(var(--color-primary-rgb), 0.2));
+    filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.15));
     transition: transform 0.3s ease;
 }
 
@@ -218,7 +230,7 @@ body {
 }
 
 .detail-item:hover {
-    box-shadow: 0 4px 8px rgba(var(--color-primary-rgb), 0.2);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
     transform: translateX(5px);
 }
 
@@ -268,7 +280,7 @@ body {
     top: 0;
     bottom: 0;
     width: 3px;
-    background: linear-gradient(to bottom, var(--color-primary), var(--color-primary-dark));
+    background: var(--color-primary);
     border-radius: 2px;
 }
 
@@ -288,7 +300,7 @@ body {
     background-color: var(--color-primary);
     border: 4px solid #ffffff;
     border-radius: 50%;
-    box-shadow: 0 2px 4px rgba(var(--color-primary-rgb), 0.3);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .timeline-year {
@@ -307,7 +319,7 @@ body {
 }
 
 .timeline-content:hover {
-    box-shadow: 0 4px 12px rgba(var(--color-primary-rgb), 0.2);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     transform: translateY(-2px);
 }
 
@@ -346,7 +358,7 @@ body {
 }
 
 .work-card:hover {
-    box-shadow: 0 8px 24px rgba(var(--color-primary-rgb), 0.3);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
     transform: translateY(-8px);
 }
 
