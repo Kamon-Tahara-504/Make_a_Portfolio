@@ -116,15 +116,17 @@ body {
     align-items: center;
 }
 
-.intro-image svg {
+.intro-image img.profile-img {
     width: 100%;
     max-width: 300px;
     height: auto;
+    border-radius: 50%;
+    object-fit: cover;
     filter: drop-shadow(0 4px 6px rgba(255, 152, 0, 0.2));
     transition: transform 0.3s ease;
 }
 
-.intro-image svg:hover {
+.intro-image img.profile-img:hover {
     transform: scale(1.05);
 }
 
@@ -308,14 +310,14 @@ body {
     background-color: #FFE0B2;
 }
 
-.work-image svg {
+.work-image img.work-img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     transition: transform 0.3s ease;
 }
 
-.work-card:hover .work-image svg {
+.work-card:hover .work-image img.work-img {
     transform: scale(1.1);
 }
 
