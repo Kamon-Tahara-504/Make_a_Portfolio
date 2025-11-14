@@ -1,49 +1,45 @@
 <!-- ========================================
-   HTMLタグの簡単な説明（超簡単！）
-   ========================================
-   
-   このファイルでサイトの文字を変えられます！
-   実は、タグの中の白い文字を変えるだけで、サイトに表示される文字が変わります！
-   
-   どうやって変えるの？
-   ↓
-   1. 下の説明を見て、どのタグが何を表示するか確認
-   2. タグの中の文字（例：<p>ここ</p> の「ここ」の部分）を変える
-   3. ブラウザでページを更新（command + r）
-   4. 文字が変わってる！すげえ！！！
-   
-   よく使うタグと文字の大きさ
-   ↓
-   <h1>〜</h1>  → 大きな見出し（一番大きい！約2.5倍の大きさ）
-   
-   <h2>〜</h2>  → 中くらいの見出し（大きい！約2倍の大きさ）
-   
-   <h3>〜</h3>  → 小さな見出し（少し大きい！約1.4倍の大きさ）
-   
-   <p>〜</p>    → 普通の文章（標準サイズ）
+HTMLタグの簡単な説明
+このファイルでサイトの文字を変更できます！
+========================================
 
-   <strong>〜</strong> → 太字にする（大きさは変わらない）
-   
-   <br>         → 改行したい前の行に使う（改行）
-   
-   タグの使い分けのコツ
-   ↓
-   - 見出しは大きい順に <h1> → <h2> → <h3> を使う
-   - 普通の文章は <p> を使う
-   - 太字にしたい部分だけ <strong> で囲む
-   - 改行したい時だけ <br> を使う
-   
-   例：名前を変えたい
-   <p class="intro-name">名前</p>  ← これを
-   <p class="intro-name">田原 果門</p>  ← こう変えるだけ！
-   
-   注意！
-   ↓
-   - < と > で囲まれた部分（タグ）は消さないでください
-   - タグの中の文字だけを変えてください
-   - タグの名前（class="..."など）も変えないでください(動かなくなっちゃいます！)
-   
-   ======================================== -->
+変更の方法
+↓
+1. 下の説明を見て、どのタグが何を表示するか確認
+2. タグの中の文字（例：<p>ここ</p> の「ここ」の部分）を変える
+3. ブラウザでページを更新（command + r）
+4. 文字が変わってる！！
+
+よく使うタグと文字の大きさ
+↓
+<h1>〜</h1>  → 大きな見出し（一番大きい！約2.5倍の大きさ）
+<h2>〜</h2>  → 中くらいの見出し（大きい！約2倍の大きさ）
+<h3>〜</h3>  → 小さな見出し（少し大きい！約1.4倍の大きさ）
+<p>〜</p>    → 普通の文章（標準サイズ）
+<strong>〜</strong> → 太字にする（大きさは変わらない）
+
+<br>→ 改行したい前の行に使う（改行）
+
+タグの使い分けのコツ
+↓
+- 見出しは大きい順に <h1> → <h2> → <h3> を使う
+- 普通の文章は <p> を使う
+- 太字にしたい部分だけ <strong> で囲む
+- 改行したい時だけ <br> を使う
+
+例：名前を変えたい
+(旧)
+<p class="intro-name">名前</p> 
+(新)
+<p class="intro-name">田原 果門</p>
+
+
+注意！
+↓
+- < > (タグ）の中は消さないでください
+- タグ同士に囲まれている文字のみを変えてください
+- タグの名前（class="..."など）も変えないでください(動かなくなっちゃいます！)
+======================================== -->
 
 <!DOCTYPE html>
 <html lang="ja">
@@ -128,56 +124,56 @@
     </section>
 
     <!-- 趣味・興味セクション -->
-    <section id="hobbies" class="works-section">
+    <section id="hobbies" class="hobby-section">
         <div class="container">
-            <h2 class="section-title">趣味・興味</h2>
-            <div class="works-grid">
-                <div class="work-card">
-                    <div class="work-content">
-                        <h3>趣味・興味 1</h3>
+            <p class="section-title">趣味・興味</p>
+            <div class="hobby-grid">
+                <div class="hobby-card">
+                    <div class="hobby-content">
+                        <p>趣味・興味 1</p>
                         <p>ここに入力してください。<br>
                             ああああああああああああああああ
                         </p>
-                        <div class="work-tags">
+                        <div class="hobby-tags">
                             <span class="tag">趣味</span>
                             <span class="tag">活動</span>
                         </div>
                     </div>
                 </div>
 
-                <div class="work-card">
-                    <div class="work-content">
-                        <h3>趣味・興味 2</h3>
+                <div class="hobby-card">
+                    <div class="hobby-content">
+                        <p>趣味・興味 2</p>
                         <p>ここに入力してください。<br>
                             ああああああああああああああああ
                         </p>
-                        <div class="work-tags">
+                        <div class="hobby-tags">
                             <span class="tag">趣味</span>
                             <span class="tag">活動</span>
                         </div>
                     </div>
                 </div>
 
-                <div class="work-card">
-                    <div class="work-content">
-                        <h3>趣味・興味 3</h3>
+                <div class="hobby-card">
+                    <div class="hobby-content">
+                        <p>趣味・興味 3</p>
                         <p>ここに入力してください。<br>
                             ああああああああああああああああ
                         </p>
-                        <div class="work-tags">
+                        <div class="hobby-tags">
                             <span class="tag">趣味</span>
                             <span class="tag">活動</span>
                         </div>
                     </div>
                 </div>
 
-                <div class="work-card">
-                    <div class="work-content">
-                        <h3>趣味・興味 4</h3>
+                <div class="hobby-card">
+                    <div class="hobby-content">
+                        <p>趣味・興味 4</p>
                         <p>ここに入力してください。<br>
                             ああああああああああああああああ
                         </p>
-                        <div class="work-tags">
+                        <div class="hobby-tags">
                             <span class="tag">趣味</span>
                             <span class="tag">活動</span>
                         </div>

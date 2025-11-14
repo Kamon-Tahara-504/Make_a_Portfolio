@@ -1,31 +1,33 @@
 /* ========================================
-   cssで色を変更する方法（超簡単！）
-   ========================================
-   
-   このサイトの色を変えたいですか？
-   実は、下の色コードを変えるだけで、サイト全体の色が変わります！
-   
-   どうやって変えるの？
-   ↓
-   1. 下の色コード（#FF9800など）を変える
-   2. ブラウザでページを更新（command + r）
-   3. 色が変わってる！すげえ！！！
-   
-   色コードって何？
-   ↓
-   #FF9800 みたいな6桁の文字と数字の組み合わせです。
-   インターネットで「色コード 一覧」と検索すると、たくさん見つかります。
-   
-   何が変えられるの？
-   ↓
-   - メインの色：ボタンやリンクの色
-   - ヘッダーの色：上部メニューの背景や文字の色
-   
-   例：オレンジから青に変えたい
-   --color-primary: #a8a8a8;  ← これを
-   --color-primary: #2196F3;  ← こう変えるだけ！
-   
-   ======================================== */
+cssで色を変更する方法
+このファイルでサイトの配色を変更できます！
+========================================
+
+どうやって変えるの？
+↓
+1. 色コード（例：#FF9800）を変える
+2. ページを更新（Google chrome上で「command + r」　もしくは VScode右下の「Go Live」を押してください）
+3. 色が変わってる！！
+
+
+色コードって何？
+↓
+6桁の文字と数字の組み合わせです。(例：#FF9800)
+タブの隣にあるカラーコードを見ながら好きな色を選んでください
+
+
+変更できる主な箇所
+- メインの色：ボタンやリンクの色
+- ヘッダーの色：上部メニューの背景や文字の色
+
+例：オレンジから青に変えたい
+(旧 オレンジ色)
+color-primary: #a8a8a8;
+
+(新　青色)
+color-primary: #2196F3;  
+======================================== */
+
 :root {
     /* メインの色（エメラルドグリーン）
        この色を変えると、ボタンやリンクの色が全部変わります */
@@ -39,21 +41,17 @@
        背景に使われます */
     --color-primary-light: #aee3cf;
     
-    /* この数字は触らなくてOK！
-       透明度を使う時に必要な数字です（今は気にしなくて大丈夫） */
-    --color-primary-rgb: 80, 200, 120;
-    
     /* ヘッダー（上部のメニュー）の色
        ここを変えると、ヘッダーの色が変わります */
     --header-bg: #ffffff;           /* ヘッダーの背景色 */
     --header-text: #333;            /* サイトの文字色 */
     --header-divider: #999;         /* メニューの区切り線 */
     --header-shadow: rgba(0, 0, 0, 0.1);  /* ヘッダーの影の色 */
+
+    /* この数字は今回は触らないでください
+       透明度を使う時に必要な数字です */
+    --color-primary-rgb: 255, 152, 0;
 }
-
-
-
-
 
 
 
@@ -339,20 +337,20 @@ h2.section-title::after {
     line-height: 1.6;
 }
 
-/* 制作物セクション */
-.works-section {
+/* セクション */
+.hobby-section {
     padding: 80px 20px;
     background: linear-gradient(135deg, var(--color-primary-light) 0%, #ffffff 100%);
 }
 
-.works-grid {
+.hobby-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 60px;
     margin-top: 40px;
 }
 
-.work-card {
+.hobby-card {
     background-color: #ffffff;
     border-radius: 12px;
     overflow: hidden;
@@ -362,19 +360,19 @@ h2.section-title::after {
     flex-direction: column;
 }
 
-.work-card:hover {
+.hobby-card:hover {
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
     transform: translateY(-8px);
 }
 
-.work-content {
+.hobby-content {
     padding: 25px;
     flex-grow: 1;
     display: flex;
     flex-direction: column;
 }
 
-.work-content h3 {
+.hobby-content p:first-of-type {
     color: var(--color-primary);
     margin-bottom: 12px;
     font-size: 1.4rem;
@@ -382,14 +380,14 @@ h2.section-title::after {
     display: block;
 }
 
-.work-content p {
+.hobby-content p:not(:first-of-type) {
     color: #555;
     margin-bottom: 20px;
     line-height: 1.6;
     flex-grow: 1;
 }
 
-.work-tags {
+.hobby-tags {
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
@@ -412,13 +410,17 @@ h2.section-title::after {
     transform: scale(1.05);
 }
 
-/* フッター */
+/* フッター(サイトの最後尾部分) */
 .footer {
     background-color: var(--color-primary-dark);
     color: #ffffff;
     padding: 30px 20px;
     text-align: center;
 }
+
+
+/*この下は触らないでください*/
+
 
 /* レスポンシブデザイン */
 @media (max-width: 768px) {
@@ -494,5 +496,3 @@ h2.section-title::after {
         padding: 60px 20px;
     }
 }
-
-/* 一番下まできた君はプログラミングの才能があるかも！！！ */
