@@ -29,17 +29,17 @@ color-primary: #2196F3;
 ======================================== */
 
 :root {
-    /* メインの色（今はグレー）
+    /* メインの色（エメラルドグリーン）
        この色を変えると、ボタンやリンクの色が全部変わります */
-    --color-primary: #6a6a6a;
+    --color-primary: #50c8ac;
     
-    /* 濃い色（今はグレー）
+    /* 濃い色（濃いエメラルドグリーン）
        タイトルや見出しに使われます */
-    --color-primary-dark: #000000;
+    --color-primary-dark: #37a598;
     
-    /* 薄い色（今はグレー）
+    /* 薄い色（薄いエメラルドグリーン）
        背景に使われます */
-    --color-primary-light: #6a6a6a;
+    --color-primary-light: #aee3cf;
     
     /* ヘッダー（上部のメニュー）の色
        ここを変えると、ヘッダーの色が変わります */
@@ -191,19 +191,19 @@ body {
     padding: 20px;
 }
 
-p.intro-name {
-    font-size: 1rem;
+h1.intro-name {
+    font-size: 2.5rem;
     color: var(--color-primary);
     margin-bottom: 10px;
-    font-weight: normal;
+    font-weight: 700;
     display: block;
 }
 
-p.intro-title {
-    font-size: 1rem;
+h2.intro-title {
+    font-size: 1.5rem;
     color: var(--color-primary-dark);
     margin-bottom: 20px;
-    font-weight: normal;
+    font-weight: 500;
     display: block;
 }
 
@@ -244,18 +244,18 @@ p.intro-title {
     background-color: #ffffff;
 }
 
-p.section-title {
-    font-size: 1rem;
+h2.section-title {
+    font-size: 2.5rem;
     color: var(--color-primary);
     text-align: center;
     margin-bottom: 60px;
-    font-weight: normal;
+    font-weight: 700;
     position: relative;
     padding-bottom: 20px;
     display: block;
 }
 
-p.section-title::after {
+h2.section-title::after {
     content: '';
     position: absolute;
     bottom: 0;
@@ -324,15 +324,15 @@ p.section-title::after {
     transform: translateY(-2px);
 }
 
-.timeline-content p:first-of-type {
+.timeline-content h3 {
     color: var(--color-primary-dark);
     margin-bottom: 10px;
-    font-size: 1rem;
-    font-weight: normal;
+    font-size: 1.3rem;
+    font-weight: 600;
     display: block;
 }
 
-.timeline-content p:not(:first-of-type) {
+.timeline-content p {
     color: #555;
     line-height: 1.6;
 }
@@ -375,8 +375,8 @@ p.section-title::after {
 .hobby-content p:first-of-type {
     color: var(--color-primary);
     margin-bottom: 12px;
-    font-size: 1rem;
-    font-weight: normal;
+    font-size: 1.4rem;
+    font-weight: 600;
     display: block;
 }
 
@@ -438,16 +438,16 @@ p.section-title::after {
         order: -1;
     }
 
-    p.intro-name {
-        font-size: 1rem;
+    h1.intro-name {
+        font-size: 2rem;
     }
 
-    p.intro-title {
-        font-size: 1rem;
+    h2.intro-title {
+        font-size: 1.2rem;
     }
 
-    p.section-title {
-        font-size: 1rem;
+    h2.section-title {
+        font-size: 2rem;
     }
 
     .timeline {
@@ -483,12 +483,12 @@ p.section-title::after {
         padding: 60px 20px;
     }
 
-    p.intro-name {
-        font-size: 1rem;
+    h1.intro-name {
+        font-size: 1.8rem;
     }
 
-    p.section-title {
-        font-size: 1rem;
+    h2.section-title {
+        font-size: 1.8rem;
     }
 
     .experience-section,
